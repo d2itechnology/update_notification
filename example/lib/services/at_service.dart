@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:at_client_mobile/at_client_mobile.dart';
-import 'package:at_onboarding_flutter_example/utils/app_constants.dart';
+import 'package:update_notification_example/utils/app_constants.dart';
 import 'package:at_commons/at_commons.dart' as at_commons;
 import 'package:path_provider/path_provider.dart' as path_provider;
 
@@ -17,7 +17,8 @@ class AtService {
   String? _atsign;
 
   Future<AtClientPreference> getAtClientPreference() async {
-    Directory appDocumentDirectory = await path_provider.getApplicationSupportDirectory();
+    Directory appDocumentDirectory =
+        await path_provider.getApplicationSupportDirectory();
     String path = appDocumentDirectory.path;
     AtClientPreference _atClientPreference = AtClientPreference()
       ..isLocalStoreRequired = true
@@ -28,7 +29,8 @@ class AtService {
     return _atClientPreference;
   }
 
-  Map<String?, AtClientService> atClientServiceMap = <String, AtClientService>{};
+  Map<String?, AtClientService> atClientServiceMap =
+      <String, AtClientService>{};
 
   AtClient? _getAtClientForAtsign({String? atsign}) {
     atsign ??= _atsign;

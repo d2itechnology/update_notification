@@ -1,4 +1,4 @@
-# at_onboarding_flutter_example
+# update_notification_example
 
 Demonstrates how to use the at_onboarding_flutter plugin.
 

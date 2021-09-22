@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
-import 'package:at_client_mobile/at_client_mobile.dart';
-import 'package:at_utils/at_logger.dart';
 import 'package:update_notification/screens/pair_atsign.dart';
 import 'package:update_notification/services/custom_nav.dart';
 import 'package:update_notification/services/onboarding_service.dart';
 import 'package:update_notification/services/size_config.dart';
 import 'package:update_notification/utils/app_constants.dart';
 import 'package:update_notification/utils/color_constants.dart';
+import 'package:flutter/material.dart';
+import 'package:at_client_mobile/at_client_mobile.dart';
+import 'package:at_utils/at_logger.dart';
 
 class Onboarding {
   ///Required field as for navigation.

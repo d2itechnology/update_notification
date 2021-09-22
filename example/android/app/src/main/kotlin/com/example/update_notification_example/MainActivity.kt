@@ -1,4 +1,4 @@
-package com.atsign.example
+package com.example.update_notification_example
 
 import io.flutter.embedding.android.FlutterActivity
 

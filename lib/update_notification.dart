@@ -1,4 +1,4 @@
-library at_onboarding_flutter;
+library update_notification;
 
 export './screens/onboarding_widget.dart';
 export './utils/app_constants.dart' show RootEnvironment;

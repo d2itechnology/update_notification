@@ -1,12 +1,12 @@
 import 'package:at_client_mobile/at_client_mobile.dart';
-import 'package:at_onboarding_flutter_example/dashboard.dart';
-import 'package:at_onboarding_flutter_example/services/at_service.dart';
-import 'package:at_onboarding_flutter_example/utils/app_constants.dart';
-import 'package:at_onboarding_flutter_example/utils/app_strings.dart';
+import 'package:update_notification_example/dashboard.dart';
+import 'package:update_notification_example/services/at_service.dart';
+import 'package:update_notification_example/utils/app_constants.dart';
+import 'package:update_notification_example/utils/app_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:at_onboarding_flutter/widgets/custom_reset_button.dart';
+import 'package:update_notification/widgets/custom_reset_button.dart';
 
-import 'package:at_onboarding_flutter/at_onboarding_flutter.dart';
+import 'package:update_notification/update_notification.dart';
 import 'package:at_utils/at_logger.dart';
 
 void main() {
@@ -25,13 +25,16 @@ class _MyAppState extends State<MyApp> {
   final AtSignLogger _logger = AtSignLogger('Plugin example app');
   @override
   void initState() {
-    AtService.getInstance().getAtClientPreference().then((AtClientPreference value) => atClientPrefernce = value);
+    AtService.getInstance()
+        .getAtClientPreference()
+        .then((AtClientPreference value) => atClientPrefernce = value);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Plugin example app'),
@@ -48,7 +51,8 @@ class _MyAppState extends State<MyApp> {
                         domain: AppConstants.rootDomain,
                         atClientPreference: atClientPrefernce,
                         appColor: const Color.fromARGB(255, 240, 94, 62),
-                        onboard: (Map<String?, AtClientService> value, String? atsign) {
+                        onboard: (Map<String?, AtClientService> value,
+                            String? atsign) {
                           AtService.getInstance().atClientServiceMap = value;
                           _logger.finer('Successfully onboarded $atsign');
                         },
