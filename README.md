@@ -14,7 +14,7 @@ Screenshots:
 Add update_notification as [a dependency in your `pubspec.yaml` file.](https://flutter.io/using-packages/)
 ```
 dependencies:
-  update_notification: ^0.0.2
+  update_notification: ^1.0.1
 ```
 ## Usage
 * In main.dart (or any) file, first create an instance of the `UpdateNotification` class in your `initState()` method.
